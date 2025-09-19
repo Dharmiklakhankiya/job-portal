@@ -1,0 +1,13 @@
+{
+  "name": "job-portal-root",
+  "version": "1.0.0",
+  "description": "Root for job portal client and server",
+  "private": true,
+  "license": "ISC",
+  "author": "",
+  "scripts": {
+    "install-all": "npm install --prefix client && npm install --prefix backend",
+    "dev": "concurrently \"npm run dev --prefix client\" \"npm run dev --prefix backend\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

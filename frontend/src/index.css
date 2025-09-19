@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+/* Define your design tokens in CSS */
+@theme {
+  --radius: 0.5rem; /* default radius, adjust as needed */
+  --border: 220 14% 18%; /* example HSL values, replace with actual */
+  --input: 210 10% 98%;
+  --ring: 220 14% 30%;
+  --background: 0 0% 100%;
+  --foreground: 220 10% 20%;
+  --primary: 220 90% 50%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 200 80% 40%;
+  --secondary-foreground: 0 0% 100%;
+  --destructive: 0 80% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --muted: 210 10% 90%;
+  --muted-foreground: 220 10% 20%;
+  --accent: 180 80% 40%;
+  --accent-foreground: 0 0% 100%;
+  --popover: 220 10% 98%;
+  --popover-foreground: 220 10% 20%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 10% 20%;
+}
+
+/* Optional: create utility classes for old references */
+.border-border {
+  border-color: hsl(var(--border));
+}
+
+.bg-input {
+  background-color: hsl(var(--input));
+}
+
+.text-foreground {
+  color: hsl(var(--foreground));
+}
+
+/* You can keep adding classes for all the "colors" you need */
+
+/* Animations (accordion example) */
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+/* Container defaults */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 1400px; /* matches 2xl in old config */
+}
